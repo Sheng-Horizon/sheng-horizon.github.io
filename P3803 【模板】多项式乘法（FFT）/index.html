@@ -18,15 +18,15 @@
   <meta name="author" content="Sheng-Horizon">
   <meta name="keywords" content="信息学,飞机,休闲娱乐">
   
-    <meta name="description" content="这里有个视频，你需要点开来看  Tons of Formulas and Theorems  欧拉公式（同时也是复数指数形式的定义）：eix&#x3D;cos⁡x+isin⁡xe^{ix}&#x3D;\cos x+i\sin xeix&#x3D;cosx+isinx 反三角函数：acos(−1)&#x3D;πacos(-1)&#x3D;\piacos(−1)&#x3D;π 单位复数根：ωnk&#x3D;e2πik&#x2F;n&#x3D;cos⁡ k∗2πn+isin⁡k∗2πn\o">
+    <meta name="description" content="Tons of Formulas and Theorems  欧拉公式（同时也是复数指数形式的定义）：eix&#x3D;cos⁡x+isin⁡xe^{ix}&#x3D;\cos x+i\sin xeix&#x3D;cosx+isinx 反三角函数：acos(−1)&#x3D;πacos(-1)&#x3D;\piacos(−1)&#x3D;π 单位复数根：ωnk&#x3D;e2πik&#x2F;n&#x3D;cos⁡ k∗2πn+isin⁡k∗2πn\omega_{n}^{k}&#x3D;e^{">
 <meta property="og:type" content="article">
 <meta property="og:title" content="P3803 【模板】多项式乘法（FFT）">
 <meta property="og:url" content="https://blog.asdgssg.top/P3803%20%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B9%98%E6%B3%95%EF%BC%88FFT%EF%BC%89/index.html">
 <meta property="og:site_name" content="Sheng-Horizon&#39;s blog">
-<meta property="og:description" content="这里有个视频，你需要点开来看  Tons of Formulas and Theorems  欧拉公式（同时也是复数指数形式的定义）：eix&#x3D;cos⁡x+isin⁡xe^{ix}&#x3D;\cos x+i\sin xeix&#x3D;cosx+isinx 反三角函数：acos(−1)&#x3D;πacos(-1)&#x3D;\piacos(−1)&#x3D;π 单位复数根：ωnk&#x3D;e2πik&#x2F;n&#x3D;cos⁡ k∗2πn+isin⁡k∗2πn\o">
+<meta property="og:description" content="Tons of Formulas and Theorems  欧拉公式（同时也是复数指数形式的定义）：eix&#x3D;cos⁡x+isin⁡xe^{ix}&#x3D;\cos x+i\sin xeix&#x3D;cosx+isinx 反三角函数：acos(−1)&#x3D;πacos(-1)&#x3D;\piacos(−1)&#x3D;π 单位复数根：ωnk&#x3D;e2πik&#x2F;n&#x3D;cos⁡ k∗2πn+isin⁡k∗2πn\omega_{n}^{k}&#x3D;e^{">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-21T15:45:36.000Z">
-<meta property="article:modified_time" content="2023-02-03T11:33:45.907Z">
+<meta property="article:modified_time" content="2023-02-06T09:29:52.962Z">
 <meta property="article:author" content="Sheng-Horizon">
 <meta property="article:tag" content="FFT">
 <meta name="twitter:card" content="summary_large_image">
@@ -290,9 +290,9 @@
             
               <div class="markdown-body">
                 
-                <video src="/img/FFT.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
+                <!-- <video src="/img/FFT.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
 这里有个视频，你需要点开来看
-</video>
+</video> -->
 <h1>Tons of Formulas and Theorems</h1>
 <ol>
 <li>欧拉公式（同时也是复数指数形式的定义）：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>i</mi><mi>x</mi></mrow></msup><mo>=</mo><mi>cos</mi><mo>⁡</mo><mi>x</mi><mo>+</mo><mi>i</mi><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">e^{ix}=\cos x+i\sin x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8247em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6679em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span></span></span></span></li>
@@ -351,12 +351,12 @@ y_{k+(n/2)} &amp;= y_k^{[0]}-\omega_n^k y^{[1]}_k\\
   
     <span>></span>
     
-  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" class="category-chain-item">多项式</a>
+  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/%E5%A4%9A%E9%A1%B9%E5%BC%8F/FFT/" class="category-chain-item">FFT</a>
+  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/%E9%A2%98%E8%A7%A3/FFT/" class="category-chain-item">FFT</a>
   
   
 
