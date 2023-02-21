@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Class 类</title>
+    <link href="/Class-%E7%B1%BB/"/>
+    <url>/Class-%E7%B1%BB/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/img/Class" alt="一张图搞定"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>信息学</category>
+      
+      <category>C++基础</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>类</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CRT和exCRT</title>
     <link href="/CRT%E5%92%8CexCRT/"/>
     <url>/CRT%E5%92%8CexCRT/</url>
