@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.asdgssg.top/img/graphGif.gif">
 <meta property="article:published_time" content="2023-02-21T09:51:15.000Z">
-<meta property="article:modified_time" content="2023-02-25T07:56:00.012Z">
+<meta property="article:modified_time" content="2023-02-25T08:06:11.611Z">
 <meta property="article:author" content="Sheng-Horizon">
 <meta property="article:tag" content="最短路">
 <meta name="twitter:card" content="summary_large_image">
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.6k 字
+          3k 字
         
       </span>
     
@@ -249,7 +249,7 @@
         
         
         
-          22 分钟
+          25 分钟
         
       </span>
     
@@ -339,6 +339,9 @@
 <p><code>SPFA</code> 是 <code>Bellman-ford</code> 的优化，根据动图可以看出来 <code>Bellman-ford</code> 每次遍历的很多边由于两端点还没有扫过导致遍历是无效的。</p>
 <p><code>SPFA</code> 就用队列解决了这个问题——只有当新的最短路路径被发现后，与新最短路的端点相连的点才有希望被更新。</p>
 <p>但是通过一系列惊天地泣鬼神的构造 <code>SPFA</code> 也可以被卡到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(nm)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">nm</span><span class="mclose">)</span></span></span></span>。所以 <code>SPFA</code> 只能慎用了。</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/luckyblock/p/14317096.html">「笔记」如何优雅地卡 Spfa</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">spfa</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">memset</span>(dist,<span class="hljs-number">0x3f</span>,<span class="hljs-keyword">sizeof</span> dist);<br>    dist[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;<br>    queue&lt;<span class="hljs-type">int</span>&gt; que;<br>    que.<span class="hljs-built_in">push</span>(<span class="hljs-number">1</span>);<br>    vis[<span class="hljs-number">1</span>]=<span class="hljs-literal">true</span>;<br>    <span class="hljs-keyword">while</span>(!que.<span class="hljs-built_in">empty</span>())&#123;<br>        <span class="hljs-type">int</span> point=que.<span class="hljs-built_in">front</span>();<br>        que.<span class="hljs-built_in">pop</span>();<br>        vis[point]=<span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=h[point];i!=<span class="hljs-number">-1</span>;i=ne[i])&#123;<br>            <span class="hljs-type">int</span> j=e[i];<br>            <span class="hljs-keyword">if</span>(dist[j]&gt;dist[point]+w[i])&#123;<br>                dist[j]=dist[point]+w[i];<br>                <span class="hljs-keyword">if</span>(!vis[j])&#123;<br>                    vis[j]=<span class="hljs-literal">true</span>;<br>                    que.<span class="hljs-built_in">push</span>(j);<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>主函数什么的和 <code>Dijkstra</code> 一致</p>
 
                 
               </div>
