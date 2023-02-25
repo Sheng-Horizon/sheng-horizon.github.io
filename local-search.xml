@@ -60,7 +60,7 @@
       
       <category>信息学</category>
       
-      <category>图论</category>
+      <category>图论与搜索</category>
       
       <category>最短路</category>
       
@@ -495,15 +495,15 @@
       
       <category>模拟退火</category>
       
-      <category>搜索</category>
-      
-      <category>模拟退火</category>
-      
       <category>数学</category>
       
       <category>数论</category>
       
       <category>高斯消元</category>
+      
+      <category>图论与搜索</category>
+      
+      <category>模拟退火</category>
       
     </categories>
     
