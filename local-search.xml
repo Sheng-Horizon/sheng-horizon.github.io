@@ -17,12 +17,28 @@
       
       <category>数论</category>
       
+      <category>欧拉定理</category>
+      
+      <category>扩展欧拉定理</category>
+      
+      <category>费马小定理</category>
+      
+      <category>威尔逊定理</category>
+      
     </categories>
     
     
     <tags>
       
       <tag>数论</tag>
+      
+      <tag>欧拉定理</tag>
+      
+      <tag>扩展欧拉定理</tag>
+      
+      <tag>费马小定理</tag>
+      
+      <tag>威尔逊定理</tag>
       
     </tags>
     
