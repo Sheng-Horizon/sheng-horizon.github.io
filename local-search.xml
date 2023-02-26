@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>双向搜索</title>
+    <link href="/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/"/>
+    <url>/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/</url>
+    
+    <content type="html"><![CDATA[<p>当竞赛生眼高手低，瞧不起基础算法的时候，基础算法就会来反杀你。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>信息学</category>
+      
+      <category>图论与搜索</category>
+      
+      <category>双向搜索</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>双向搜索</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数论集锦</title>
     <link href="/%E6%95%B0%E8%AE%BA%E9%9B%86%E9%94%A6/"/>
     <url>/%E6%95%B0%E8%AE%BA%E9%9B%86%E9%94%A6/</url>
@@ -493,9 +522,9 @@
       
       <category>数学</category>
       
-      <category>数论</category>
-      
       <category>图论与搜索</category>
+      
+      <category>数论</category>
       
       <category>高斯消元</category>
       

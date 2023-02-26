@@ -834,17 +834,17 @@ i.iconfont {
 }
 :root {
   --color-mode: "light";
-  --body-bg-color: #eee;
+  --body-bg-color: #d0d0d0;
   --board-bg-color: #fff;
-  --text-color: #3c4858;
-  --sec-text-color: #718096;
-  --post-text-color: #2c3e50;
-  --post-heading-color: #1a202c;
-  --post-link-color: #0366d6;
-  --link-hover-color: #30a9de;
-  --link-hover-bg-color: #f8f9fa;
+  --text-color: #484848;
+  --sec-text-color: #808080;
+  --post-text-color: #343434;
+  --post-heading-color: #202020;
+  --post-link-color: #f87700;
+  --link-hover-color: #ef873e;
+  --link-hover-bg-color: #b86001;
   --line-color: #eaecef;
-  --navbar-bg-color: #2f4154;
+  --navbar-bg-color: #414141;
   --navbar-text-color: #fff;
   --subtitle-color: #fff;
   --scrollbar-color: #c4c6c9;
@@ -859,17 +859,17 @@ i.iconfont {
     --color-mode: "dark";
   }
   :root:not([data-user-color-scheme]) {
-    --body-bg-color: #181c27;
-    --board-bg-color: #252d38;
-    --text-color: #c4c6c9;
-    --sec-text-color: #a7a9ad;
-    --post-text-color: #c4c6c9;
-    --post-heading-color: #c4c6c9;
-    --post-link-color: #1589e9;
-    --link-hover-color: #30a9de;
+    --body-bg-color: #1c1c1c;
+    --board-bg-color: #2d2d2d;
+    --text-color: #c6c6c6;
+    --sec-text-color: #a9a9a9;
+    --post-text-color: #c6c6c6;
+    --post-heading-color: #c6c6c6;
+    --post-link-color: #cc6a01;
+    --link-hover-color: #f87700;
     --link-hover-bg-color: #364151;
     --line-color: #435266;
-    --navbar-bg-color: #1f3144;
+    --navbar-bg-color: #2a2a2a;
     --navbar-text-color: #d0d0d0;
     --subtitle-color: #d0d0d0;
     --scrollbar-color: #687582;
@@ -894,17 +894,17 @@ i.iconfont {
   }
 }
 [data-user-color-scheme="dark"] {
-  --body-bg-color: #181c27;
-  --board-bg-color: #252d38;
-  --text-color: #c4c6c9;
-  --sec-text-color: #a7a9ad;
-  --post-text-color: #c4c6c9;
-  --post-heading-color: #c4c6c9;
-  --post-link-color: #1589e9;
-  --link-hover-color: #30a9de;
+  --body-bg-color: #1c1c1c;
+  --board-bg-color: #2d2d2d;
+  --text-color: #c6c6c6;
+  --sec-text-color: #a9a9a9;
+  --post-text-color: #c6c6c6;
+  --post-heading-color: #c6c6c6;
+  --post-link-color: #cc6a01;
+  --link-hover-color: #f87700;
   --link-hover-bg-color: #364151;
   --line-color: #435266;
-  --navbar-bg-color: #1f3144;
+  --navbar-bg-color: #2a2a2a;
   --navbar-text-color: #d0d0d0;
   --subtitle-color: #d0d0d0;
   --scrollbar-color: #687582;
