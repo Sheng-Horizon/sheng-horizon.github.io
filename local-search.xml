@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>KMP</title>
+    <link href="/KMP/"/>
+    <url>/KMP/</url>
+    
+    <content type="html"><![CDATA[<p>太多要复习了，脑阔痛。<br>复习半天双向搜索，还是来复习点简单的缓缓</p><p>整个 <code>KMP</code> 唯一难搞的地方就是 <code>ne[]</code>。其意义如下：</p><ol><li><code>ne[i]</code> 表示当模式串和主串在模式串位置 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 处匹配发生失配时，模式串的下标应该会退到的位置。</li><li><code>ne[i]</code> 也可以表示在模式串截止到位置 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 的前缀子串中，从头开始和从末尾开始的最长相同子串的长度。</li></ol><p>如图:<br><img src="https://cdn.luogu.com.cn/upload/image_hosting/ozrlvirm.png" alt=""></p><p>长的是主串，短的是模式串。当主串与模式串在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 处发生失配时，相比从头开始重新匹配，只移到 <code>ne[i]</code> 处就使复杂度得到了保障。</p><p>时间复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n+m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span>。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>信息学</category>
+      
+      <category>字符串</category>
+      
+      <category>KMP</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>KMP</tag>
+      
+      <tag>字符串</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>双向搜索</title>
     <link href="/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/"/>
     <url>/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/</url>

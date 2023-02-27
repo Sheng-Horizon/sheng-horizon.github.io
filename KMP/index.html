@@ -16,22 +16,25 @@
   <meta name="author" content="Sheng-Horizon">
   <meta name="keywords" content="信息学,飞机,休闲娱乐">
   
-    <meta name="description" content="当竞赛生眼高手低，瞧不起基础算法的时候，基础算法就会来反杀你。">
+    <meta name="description" content="太多要复习了，脑阔痛。 复习半天双向搜索，还是来复习点简单的缓缓 整个 KMP 唯一难搞的地方就是 ne[]。其意义如下：  ne[i] 表示当模式串和主串在模式串位置 iii 处匹配发生失配时，模式串的下标应该会退到的位置。 ne[i] 也可以表示在模式串截止到位置 iii 的前缀子串中，从头开始和从末尾开始的最长相同子串的长度。  如图:  长的是主串，短的是模式串。当主串与模式串在 iii">
 <meta property="og:type" content="article">
-<meta property="og:title" content="双向搜索">
-<meta property="og:url" content="https://blog.asdgssg.top/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/index.html">
+<meta property="og:title" content="KMP">
+<meta property="og:url" content="https://blog.asdgssg.top/KMP/index.html">
 <meta property="og:site_name" content="Sheng-Horizon&#39;s blog">
-<meta property="og:description" content="当竞赛生眼高手低，瞧不起基础算法的时候，基础算法就会来反杀你。">
+<meta property="og:description" content="太多要复习了，脑阔痛。 复习半天双向搜索，还是来复习点简单的缓缓 整个 KMP 唯一难搞的地方就是 ne[]。其意义如下：  ne[i] 表示当模式串和主串在模式串位置 iii 处匹配发生失配时，模式串的下标应该会退到的位置。 ne[i] 也可以表示在模式串截止到位置 iii 的前缀子串中，从头开始和从末尾开始的最长相同子串的长度。  如图:  长的是主串，短的是模式串。当主串与模式串在 iii">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-25T08:59:56.000Z">
-<meta property="article:modified_time" content="2023-02-25T09:14:34.744Z">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/ozrlvirm.png">
+<meta property="article:published_time" content="2023-02-27T09:52:45.000Z">
+<meta property="article:modified_time" content="2023-02-27T10:12:41.876Z">
 <meta property="article:author" content="Sheng-Horizon">
-<meta property="article:tag" content="双向搜索">
+<meta property="article:tag" content="KMP">
+<meta property="article:tag" content="字符串">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/image_hosting/ozrlvirm.png">
   
   
   
-  <title>双向搜索 - Sheng-Horizon&#39;s blog</title>
+  <title>KMP - Sheng-Horizon&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="双向搜索"></span>
+            <span id="subtitle" data-typed-text="KMP"></span>
           
         </div>
 
@@ -222,8 +225,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-25 16:59" pubdate>
-          2023年2月25日 下午
+        <time datetime="2023-02-27 17:52" pubdate>
+          2023年2月27日 下午
         </time>
       </span>
     
@@ -234,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          31 字
+          242 字
         
       </span>
     
@@ -245,7 +248,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -283,12 +286,22 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">双向搜索</h1>
+            <h1 style="display: none">KMP</h1>
             
             
               <div class="markdown-body">
                 
-                <p>当竞赛生眼高手低，瞧不起基础算法的时候，基础算法就会来反杀你。</p>
+                <p>太多要复习了，脑阔痛。<br>
+复习半天双向搜索，还是来复习点简单的缓缓</p>
+<p>整个 <code>KMP</code> 唯一难搞的地方就是 <code>ne[]</code>。其意义如下：</p>
+<ol>
+<li><code>ne[i]</code> 表示当模式串和主串在模式串位置 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 处匹配发生失配时，模式串的下标应该会退到的位置。</li>
+<li><code>ne[i]</code> 也可以表示在模式串截止到位置 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 的前缀子串中，从头开始和从末尾开始的最长相同子串的长度。</li>
+</ol>
+<p>如图:<br>
+<img src="https://cdn.luogu.com.cn/upload/image_hosting/ozrlvirm.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>长的是主串，短的是模式串。当主串与模式串在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 处发生失配时，相比从头开始重新匹配，只移到 <code>ne[i]</code> 处就使复杂度得到了保障。</p>
+<p>时间复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n+m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span>。</p>
 
                 
               </div>
@@ -312,12 +325,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/%E5%9B%BE%E8%AE%BA%E4%B8%8E%E6%90%9C%E7%B4%A2/" class="category-chain-item">图论与搜索</a>
+  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="category-chain-item">字符串</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/%E5%9B%BE%E8%AE%BA%E4%B8%8E%E6%90%9C%E7%B4%A2/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/" class="category-chain-item">双向搜索</a>
+  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP/" class="category-chain-item">KMP</a>
   
   
 
@@ -336,7 +349,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/">#双向搜索</a>
+        <a href="/tags/KMP/">#KMP</a>
+      
+        <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">#字符串</a>
       
     </div>
   
@@ -348,8 +363,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>双向搜索</div>
-      <div>https://blog.asdgssg.top/双向搜索/</div>
+      <div>KMP</div>
+      <div>https://blog.asdgssg.top/KMP/</div>
     </div>
     <div class="license-meta">
       
@@ -361,7 +376,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月25日</div>
+          <div>2023年2月27日</div>
         </div>
       
       
@@ -393,18 +408,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/KMP/" title="KMP">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">KMP</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/%E6%95%B0%E8%AE%BA%E9%9B%86%E9%94%A6/" title="数论集锦">
-                        <span class="hidden-mobile">数论集锦</span>
+                      <a href="/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/" title="双向搜索">
+                        <span class="hidden-mobile">双向搜索</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -427,7 +436,7 @@
         var options = Object.assign(
           {"clientID":"5274f5ee5bd26f7ad354","clientSecret":"834609204c745f006bf5a3c05bbe2f064b1249a0","repo":"FileSaving","owner":"Sheng-Horizon","admin":["Sheng-Horizon"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'cf43b6f7d34552fb575b71f666da4944'
+            id: '1c2b0bdceadfd2ca3b2053761a07f862'
           }
         )
         var gitalk = new Gitalk(options);
