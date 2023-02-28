@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>ST表（倍增表）</title>
+    <link href="/ST%E8%A1%A8%EF%BC%88%E5%80%8D%E5%A2%9E%E8%A1%A8%EF%BC%89/"/>
+    <url>/ST%E8%A1%A8%EF%BC%88%E5%80%8D%E5%A2%9E%E8%A1%A8%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<p>看上次做ST表示整整一年前啊，当时刚初三下期。</p><p>高中确实没有初中快乐，更少的朋友，更多的压力。</p><p>害，往事不堪回首。</p><p>ST表就是倍增思想，和倍增求 <code>LCA</code> 非常像。具体看一看代码就行了</p><p><a href="https://www.luogu.com.cn/problem/P3865">P3865 【模板】ST 表</a></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N=<span class="hljs-number">1e5</span>+<span class="hljs-number">10</span>;<br><span class="hljs-type">int</span> n,m;<br><span class="hljs-type">int</span> a[N];<br><span class="hljs-type">int</span> MAX[N][<span class="hljs-number">20</span>];<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">19</span>;j++)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n&amp;&amp;i+(<span class="hljs-number">1</span>&lt;&lt;(j<span class="hljs-number">-1</span>))&lt;N;i++)&#123;<br>            <span class="hljs-keyword">if</span>(j==<span class="hljs-number">0</span>) MAX[i][<span class="hljs-number">0</span>]=a[i];<br>            <span class="hljs-keyword">else</span> MAX[i][j]=<span class="hljs-built_in">max</span>(MAX[i][j<span class="hljs-number">-1</span>],MAX[i+(<span class="hljs-number">1</span>&lt;&lt;(j<span class="hljs-number">-1</span>))][j<span class="hljs-number">-1</span>]);<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">query</span><span class="hljs-params">(<span class="hljs-type">int</span> l,<span class="hljs-type">int</span> r)</span></span>&#123;<br>    <span class="hljs-type">int</span> len=r-l+<span class="hljs-number">1</span>;<br>    <span class="hljs-type">int</span> logg=<span class="hljs-number">0</span>,tmp=len&gt;&gt;<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">while</span>(tmp) logg++,tmp&gt;&gt;=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span>(MAX[l][logg],MAX[r-(<span class="hljs-number">1</span>&lt;&lt;logg)+<span class="hljs-number">1</span>][logg]);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">freopen</span>(<span class="hljs-string">&quot;test.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,stdin);<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;n,&amp;m);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;a[i]);<br>    <span class="hljs-built_in">init</span>();<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=m;i++)&#123;<br>        <span class="hljs-type">int</span> l,r;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;l,&amp;r);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,<span class="hljs-built_in">query</span>(l,r));<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>信息学</category>
+      
+      <category>C++基础</category>
+      
+      <category>ST表</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>信息学</tag>
+      
+      <tag>ST表</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>字符串哈希</title>
     <link href="/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/"/>
     <url>/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/</url>
@@ -251,9 +282,9 @@
     
     <tags>
       
-      <tag>CRT</tag>
-      
       <tag>exCRT</tag>
+      
+      <tag>CRT</tag>
       
     </tags>
     
@@ -787,9 +818,9 @@
     
     <tags>
       
-      <tag>lucas</tag>
-      
       <tag>CRT</tag>
+      
+      <tag>lucas</tag>
       
     </tags>
     
