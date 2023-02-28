@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>哈希</title>
+    <link href="/%E5%93%88%E5%B8%8C/"/>
+    <url>/%E5%93%88%E5%B8%8C/</url>
+    
+    <content type="html"><![CDATA[<p>通常情况下 <code>STL</code> 的 <code>map</code> 可香了，但是一个缺点就是常数有些大。</p><p>因此手写哈希依然必要。</p><p>最首先的思路就是将 <em>要哈希的值</em> 对 <em>一个质数</em> 取模。对一个质数取模的好处是可以降低冲突的次数。（感觉的，没有证）</p><p>但是冲突终于还是会有的，所以对于冲突，有下面两种方法。</p><h1>开放寻址法</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">100010</span>, null = <span class="hljs-number">0x3f3f3f3f</span>;<br><span class="hljs-type">int</span> h[<span class="hljs-number">200003</span>];<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> t = (x % N + N) % N;<br>    <span class="hljs-keyword">while</span> (h[t] != null &amp;&amp; h[t] != x)<br>    &#123;<br>        t ++ ;<br>        <span class="hljs-keyword">if</span> (t == N) t = <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> t;<br>&#125;<br></code></pre></td></tr></table></figure><p>函数 <code>find(x)</code> 表示的是，如果一个数 <code>x</code> 还没有被记录过，就返回它该存在什么地方，否则返回它在什么地方。<br>开放寻址法的思路是，如果如果发现当前下标位置被占了，就往后面寻找没有被占的地方，把数存进去。如果找到数组末尾了都没有，就循环到起点开始。</p><p>为了保证复杂度不爆炸，通常情况下数组大小应该开到题目数字数的两到三倍。</p><h1>拉链法</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">100003</span>;<br><br><span class="hljs-type">int</span> h[N], e[N], ne[N], idx;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> k = (x % N + N) % N;<br>    e[idx] = x;<br>    ne[idx] = h[k];<br>    h[k] = idx ++ ;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> k = (x % N + N) % N;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = h[k]; i != <span class="hljs-number">-1</span>; i = ne[i])<br>        <span class="hljs-keyword">if</span> (e[i] == x)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>拉链法选择“在一棵树上吊死”。不是冲突吗？我直接在冲突的地方上一条链，插入的时候就往链上插，查询就在链上找。</p><h1>时间复杂度</h1><p>一般手写哈希也不至于每次都在同一个地方冲突（什么NB数据），所以我们直接认为其复杂度为常数。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>信息学</category>
+      
+      <category>C++基础</category>
+      
+      <category>哈希</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>信息学</tag>
+      
+      <tag>哈希</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>KMP</title>
     <link href="/KMP/"/>
     <url>/KMP/</url>

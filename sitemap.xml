@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.asdgssg.top/%E5%93%88%E5%B8%8C/</loc>
+    
+    <lastmod>2023-02-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.asdgssg.top/KMP/</loc>
     
     <lastmod>2023-02-28</lastmod>
@@ -502,6 +511,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://blog.asdgssg.top/tags/%E4%BF%A1%E6%81%AF%E5%AD%A6/</loc>
+    <lastmod>2023-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.asdgssg.top/tags/%E5%93%88%E5%B8%8C/</loc>
+    <lastmod>2023-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -800,6 +823,13 @@
   
   <url>
     <loc>https://blog.asdgssg.top/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B/</loc>
+    <lastmod>2023-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.asdgssg.top/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6/C-%E5%9F%BA%E7%A1%80/%E5%93%88%E5%B8%8C/</loc>
     <lastmod>2023-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
