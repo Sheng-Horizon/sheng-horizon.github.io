@@ -12,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#414141">
   <meta name="author" content="Sheng-Horizon">
   <meta name="keywords" content="信息学,飞机,休闲娱乐">
@@ -19,7 +21,7 @@
     <meta name="description" content="最最核心公式 g(1)S(n)&#x3D;∑i&#x3D;1n(f∗g)(i)−∑i&#x3D;2ng(i)S(⌊ni⌋)g(1)S(n)&#x3D;\sum_{i&#x3D;1}^n(f\ast g)(i)-\sum_{i&#x3D;2}^ng(i)S\left(\left\lfloor\frac{n}{i}\right\rfloor\right) g(1)S(n)&#x3D;i&#x3D;1∑n​(f∗g)(i)−i&#x3D;2∑n​g(i)S(⌊in​⌋) 前置知识 狄利克雷卷">
 <meta property="og:type" content="article">
 <meta property="og:title" content="P4213 【模板】杜教筛（Sum）">
-<meta property="og:url" content="https://blog.asdgssg.top/P4213-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9D%9C%E6%95%99%E7%AD%9B%EF%BC%88Sum%EF%BC%89/index.html">
+<meta property="og:url" content="https://www.asdgssg.top/P4213-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9D%9C%E6%95%99%E7%AD%9B%EF%BC%88Sum%EF%BC%89/index.html">
 <meta property="og:site_name" content="Sheng-Horizon&#39;s blog">
 <meta property="og:description" content="最最核心公式 g(1)S(n)&#x3D;∑i&#x3D;1n(f∗g)(i)−∑i&#x3D;2ng(i)S(⌊ni⌋)g(1)S(n)&#x3D;\sum_{i&#x3D;1}^n(f\ast g)(i)-\sum_{i&#x3D;2}^ng(i)S\left(\left\lfloor\frac{n}{i}\right\rfloor\right) g(1)S(n)&#x3D;i&#x3D;1∑n​(f∗g)(i)−i&#x3D;2∑n​g(i)S(⌊in​⌋) 前置知识 狄利克雷卷">
 <meta property="og:locale" content="zh_CN">
@@ -71,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.asdgssg.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"www.asdgssg.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -613,7 +615,7 @@ S_{\varphi}(n) &amp;=\sum_{i=1}^n\varphi(i)\\
   <div class="license-box my-3">
     <div class="license-title">
       <div>P4213 【模板】杜教筛（Sum）</div>
-      <div>https://blog.asdgssg.top/P4213-【模板】杜教筛（Sum）/</div>
+      <div>https://www.asdgssg.top/P4213-【模板】杜教筛（Sum）/</div>
     </div>
     <div class="license-meta">
       

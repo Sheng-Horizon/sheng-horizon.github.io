@@ -12,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#414141">
   <meta name="author" content="Sheng-Horizon">
   <meta name="keywords" content="信息学,飞机,休闲娱乐">
@@ -19,7 +21,7 @@
     <meta name="description" content="之前一直没有搞明白 Pollard-Rho 算法，现在终于是明白了，就回答一下之前自己的疑问： Q: Pollard-Rho 到底是怎么运用生日悖论的？ A: 详见知乎： 生日悖论其实不是一个逻辑悖论，只是与很多人的第一感觉不符罢了。它可以表述为：一个房间里有23个人则他们中有两人生日相同的概率超过一半（不考虑闰年）。 其实这在数学上很好证明，即 365365×364365×363365×⋯×36">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pollard_Rho 算法">
-<meta property="og:url" content="https://blog.asdgssg.top/Pollard-Rho-%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:url" content="https://www.asdgssg.top/Pollard-Rho-%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Sheng-Horizon&#39;s blog">
 <meta property="og:description" content="之前一直没有搞明白 Pollard-Rho 算法，现在终于是明白了，就回答一下之前自己的疑问： Q: Pollard-Rho 到底是怎么运用生日悖论的？ A: 详见知乎： 生日悖论其实不是一个逻辑悖论，只是与很多人的第一感觉不符罢了。它可以表述为：一个房间里有23个人则他们中有两人生日相同的概率超过一半（不考虑闰年）。 其实这在数学上很好证明，即 365365×364365×363365×⋯×36">
 <meta property="og:locale" content="zh_CN">
@@ -71,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.asdgssg.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"www.asdgssg.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -385,7 +387,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
   <div class="license-box my-3">
     <div class="license-title">
       <div>Pollard_Rho 算法</div>
-      <div>https://blog.asdgssg.top/Pollard-Rho-算法/</div>
+      <div>https://www.asdgssg.top/Pollard-Rho-算法/</div>
     </div>
     <div class="license-meta">
       

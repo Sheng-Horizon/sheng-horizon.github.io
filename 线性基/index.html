@@ -12,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#414141">
   <meta name="author" content="Sheng-Horizon">
   <meta name="keywords" content="信息学,飞机,休闲娱乐">
@@ -19,7 +21,7 @@
     <meta name="description" content="听名字挺唬人的，但实际上不算太难，很有意思（确信 什么是线性基？ 就是线性代数的那个基。所谓“某某题是线性基”，就是说这个题的做法是把线性基搞出来，然后怎么糊一下出答案。 拿线性基干什么？ 目前看到的经典且常见的用法是求某几个数的最大或第 kkk 小异或和。 经典例题 求最大异或和（P3812 【模板】线性基） 什么鬼捏？ 你把这些数转成二进制，然后把每个数都看成一个向量，每个数的每一个 111">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性基">
-<meta property="og:url" content="https://blog.asdgssg.top/%E7%BA%BF%E6%80%A7%E5%9F%BA/index.html">
+<meta property="og:url" content="https://www.asdgssg.top/%E7%BA%BF%E6%80%A7%E5%9F%BA/index.html">
 <meta property="og:site_name" content="Sheng-Horizon&#39;s blog">
 <meta property="og:description" content="听名字挺唬人的，但实际上不算太难，很有意思（确信 什么是线性基？ 就是线性代数的那个基。所谓“某某题是线性基”，就是说这个题的做法是把线性基搞出来，然后怎么糊一下出答案。 拿线性基干什么？ 目前看到的经典且常见的用法是求某几个数的最大或第 kkk 小异或和。 经典例题 求最大异或和（P3812 【模板】线性基） 什么鬼捏？ 你把这些数转成二进制，然后把每个数都看成一个向量，每个数的每一个 111">
 <meta property="og:locale" content="zh_CN">
@@ -71,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.asdgssg.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"www.asdgssg.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -420,7 +422,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>线性基</div>
-      <div>https://blog.asdgssg.top/线性基/</div>
+      <div>https://www.asdgssg.top/线性基/</div>
     </div>
     <div class="license-meta">
       
