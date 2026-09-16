@@ -482,7 +482,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: https://cdn.luogu.com.cn/upload/image_hosting/ddhv51tg.png
+  banner_img: /img/homepage.png
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -555,7 +555,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: https://cdn.luogu.com.cn/upload/image_hosting/4mwg5w82.png
+  banner_img: /img/post.png
   banner_img_height: 40
   banner_mask_alpha: 0.3
 
@@ -908,7 +908,7 @@ giscus:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: https://cdn.luogu.com.cn/upload/image_hosting/6n7hkcer.png
+  banner_img: /img/archive.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -965,7 +965,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: https://cdn.luogu.com.cn/upload/image_hosting/qknly6xw.png
+  banner_img: /img/about.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: /img/adfava.jpg
@@ -1023,7 +1023,7 @@ links:
       title: "Schucking_Sattin's Blog",
       intro: "Schucking_Sattin的博客",
       link: "https://www.cnblogs.com/Schucking-Sattin",
-      avatar: "https://cdn.luogu.com.cn/upload/image_hosting/eklkoc5r.png"
+      avatar: "https://s2.loli.net/2025/06/19/sHZQLI6NRnCwpFO.jpg"
     }
     # - {
     #   title: "Fluid Docs",
