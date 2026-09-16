@@ -7,8 +7,11 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
   <link rel="icon" href="/img/avatar.jpg">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -40,7 +43,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -61,7 +64,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"me.asdgssg.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"me.asdgssg.top","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -96,7 +99,7 @@
       <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
 
-    <!-- Collapsible content -->
+    <!-- Collapsible content (desktop) -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto text-center">
         
@@ -105,7 +108,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -117,7 +120,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -129,7 +132,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -141,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -153,7 +156,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -165,7 +168,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
                 <span>友链</span>
               </a>
@@ -192,6 +195,123 @@
   </div>
 </nav>
 
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>分类</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>关于</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/links/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-link-fill"></i>
+                  <span>友链</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
   
 
 <div id="banner" class="banner" parallax=true
@@ -217,6 +337,8 @@
   </div>
 </div>
 
+
+
 </div>
 
   </header>
@@ -232,17 +354,18 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+<h1 style="display: none">Sheng-Horizon&#39;s blog</h1>
 
   <div class="row mx-auto index-card">
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/%E7%BA%BF%E6%80%A7%E9%80%86%E5%85%83/" target="_blank">
           线性逆元
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/%E7%BA%BF%E6%80%A7%E9%80%86%E5%85%83/" target="_blank">
@@ -319,12 +442,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/%E5%AF%B9DP%E7%9A%84%E6%80%BB%E7%BB%93/" target="_blank">
           对DP的思考
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/%E5%AF%B9DP%E7%9A%84%E6%80%BB%E7%BB%93/" target="_blank">
@@ -380,12 +503,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/P4035-JSOI2008-%E7%90%83%E5%BD%A2%E7%A9%BA%E9%97%B4%E4%BA%A7%E7%94%9F%E5%99%A8/" target="_blank">
           P4035 [JSOI2008]球形空间产生器
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/P4035-JSOI2008-%E7%90%83%E5%BD%A2%E7%A9%BA%E9%97%B4%E4%BA%A7%E7%94%9F%E5%99%A8/" target="_blank">
@@ -464,12 +587,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/P6091-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E5%8E%9F%E6%A0%B9/" target="_blank">
           P6091 【模板】原根
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/P6091-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E5%8E%9F%E6%A0%B9/" target="_blank">
@@ -539,12 +662,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/P5491-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/" target="_blank">
           P5491 【模板】二次剩余
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/P5491-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/" target="_blank">
@@ -623,12 +746,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/P4213-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9D%9C%E6%95%99%E7%AD%9B%EF%BC%88Sum%EF%BC%89/" target="_blank">
           P4213 【模板】杜教筛（Sum）
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/P4213-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9D%9C%E6%95%99%E7%AD%9B%EF%BC%88Sum%EF%BC%89/" target="_blank">
@@ -705,12 +828,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/P3803%20%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B9%98%E6%B3%95%EF%BC%88FFT%EF%BC%89/" target="_blank">
           P3803 【模板】多项式乘法（FFT）
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/P3803%20%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B9%98%E6%B3%95%EF%BC%88FFT%EF%BC%89/" target="_blank">
@@ -787,12 +910,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/P2480-SDOI2010-%E5%8F%A4%E4%BB%A3%E7%8C%AA%E6%96%87/" target="_blank">
           P2480 [SDOI2010]古代猪文
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/P2480-SDOI2010-%E5%8F%A4%E4%BB%A3%E7%8C%AA%E6%96%87/" target="_blank">
@@ -871,12 +994,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/P4195-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%89%A9%E5%B1%95-BSGS-exBSGS/" target="_blank">
           P4195 【模板】扩展 BSGS/exBSGS
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/P4195-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%89%A9%E5%B1%95-BSGS-exBSGS/" target="_blank">
@@ -953,12 +1076,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/P3846-TJOI2007-%E5%8F%AF%E7%88%B1%E7%9A%84%E8%B4%A8%E6%95%B0-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91BSGS/" target="_blank">
           P3846 [TJOI2007] 可爱的质数/【模板】BSGS
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/P3846-TJOI2007-%E5%8F%AF%E7%88%B1%E7%9A%84%E8%B4%A8%E6%95%B0-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91BSGS/" target="_blank">
@@ -1087,7 +1210,6 @@
     <div class="footer-content">
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
-  
   
   
   

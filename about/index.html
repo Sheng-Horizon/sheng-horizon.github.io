@@ -7,8 +7,11 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
   <link rel="icon" href="/img/avatar.jpg">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -52,7 +55,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -73,7 +76,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"me.asdgssg.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"me.asdgssg.top","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -108,7 +111,7 @@
       <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
 
-    <!-- Collapsible content -->
+    <!-- Collapsible content (desktop) -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto text-center">
         
@@ -117,7 +120,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -129,7 +132,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -141,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -153,7 +156,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -165,7 +168,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -177,7 +180,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
                 <span>友链</span>
               </a>
@@ -204,6 +207,123 @@
   </div>
 </nav>
 
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>分类</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>关于</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/links/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-link-fill"></i>
+                  <span>友链</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
   
 
 <div id="banner" class="banner" parallax=true
@@ -224,6 +344,8 @@
     </div>
   </div>
 </div>
+
+
 
 </div>
 
@@ -255,7 +377,7 @@
         
         <a href=https://github.com/Sheng-Horizon class="
            hint--bottom hint--rounded"
-           aria-label=GitHub
+           aria-label="GitHub"
            target="_blank"
         >
           <i class="iconfont icon-github-fill" aria-hidden="true"></i>
@@ -267,7 +389,7 @@
         
         <a href=https://space.bilibili.com/1227195298 class="
            hint--bottom hint--rounded"
-           aria-label=bilibili
+           aria-label="bilibili"
            target="_blank"
         >
           <i class="iconfont icon-bilibili" aria-hidden="true"></i>
@@ -292,28 +414,28 @@
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/zcfr8uyx">Gorgeous Sequence 代码</a></p>
 <p><a href="lingvolive.com">不戳的单词学习网站</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/myhb4pcx">高等数学</a></p>
-<h1>快读板子</h1>
+<h1 id="快读板子">快读板子</h1>
  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt; <span class="hljs-keyword">inline</span> <span class="hljs-type">void</span> <span class="hljs-title">read</span><span class="hljs-params">(T &amp;x)</span> </span>&#123;<br>    <span class="hljs-type">int</span> s = <span class="hljs-number">1</span>, d = <span class="hljs-built_in">getchar</span>(); x = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> ( ;!<span class="hljs-built_in">isdigit</span>(d); d = <span class="hljs-built_in">getchar</span>()) <span class="hljs-keyword">if</span> (!(d^<span class="hljs-string">&#x27;-&#x27;</span>)) s = <span class="hljs-number">-1</span>;<br>    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(d)) x = x * <span class="hljs-number">10</span> + (d&amp;<span class="hljs-number">15</span>), d = <span class="hljs-built_in">getchar</span>();<br>    x *= s;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T, <span class="hljs-keyword">typename</span>...L&gt; <span class="hljs-keyword">inline</span> <span class="hljs-type">void</span> <span class="hljs-title">read</span><span class="hljs-params">(T &amp;x, L &amp;...l)</span> </span>&#123; <span class="hljs-built_in">read</span>(x), <span class="hljs-built_in">read</span>(l...); &#125;<br><br><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T&gt; <span class="hljs-type">void</span> <span class="hljs-title">write</span><span class="hljs-params">(T x)</span> </span>&#123;<br>	<span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">0</span>) &#123; <span class="hljs-built_in">putchar</span>(<span class="hljs-string">&#x27;-&#x27;</span>); x = -x; &#125;<br>	<span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">9</span>) <span class="hljs-built_in">write</span>(x / <span class="hljs-number">10</span>); <span class="hljs-built_in">putchar</span>(x % <span class="hljs-number">10</span> + <span class="hljs-string">&#x27;0&#x27;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 <p><img src="https://cdn.luogu.com.cn/upload/image_hosting/5jsetj22.png" srcset="/img/loading.gif" lazyload alt="IE R.I.P."><br>
 <img src="https://cdn.luogu.com.cn/upload/image_hosting/7nfdrewb.png" srcset="/img/loading.gif" lazyload alt="时间复杂度表"></p>
-<h1>Useful Tools</h1>
+<h1 id="useful-tools">Useful Tools</h1>
 <p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">Vscode</a><br>
 <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/orwelldevcpp/">Dev-cpp</a><br>
 <a target="_blank" rel="noopener" href="https://www.spotify.com/us/download/mac/">Spotify</a><br>
 <a target="_blank" rel="noopener" href="https://translate.google.cn">Google Translate</a><br>
 <a target="_blank" rel="noopener" href="https://csacademy.com/app/graph_editor/">在线绘图</a></p>
-<h1>歌单</h1>
+<h1 id="歌单">歌单</h1>
 <h2 id="Avicii">Avicii</h2>
 <p><a target="_blank" rel="noopener" href="https://open.spotify.com/playlist/3SLoNQ3wIGEygfjRt99zxY?si=3952a114a8d1499b">Spotify</a><br>
 <a target="_blank" rel="noopener" href="https://music.163.com/playlist?id=6854087672&amp;userid=567832972">网易云</a></p>
 <h2 id="你的名字">你的名字</h2>
 <p><a target="_blank" rel="noopener" href="https://open.spotify.com/playlist/729GSAUTeyxXAInlc3quMj?si=e1bee2694c5943e0">Spotify</a><br>
 <a target="_blank" rel="noopener" href="https://music.163.com/playlist?id=6806280316&amp;userid=567832972">网易云</a></p>
-<h1>大事记</h1>
+<h1 id="大事记">大事记</h1>
 <p>[2022/1/27] 开始学习模拟退火<br>
 [2022/1/28] 用模拟退火AC了第一道题 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1337">P1337 [JSOI2004]平衡点 / 吊打XXX</a><br>
 [2022/2/13] A了第一道黑题 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4632">P4632 [APIO2018] New Home 新家</a></p>
-<h1>AVICII FOREVER ◢ ◤</h1>
+<h1 id="avicii-forever-◢-◤">AVICII FOREVER ◢ ◤</h1>
 <p><img src="https://cdn.luogu.com.cn/upload/image_hosting/nne8c5yj.png" srcset="/img/loading.gif" lazyload alt="Avicii"></p>
 
   </div>
@@ -393,7 +515,6 @@
     <div class="footer-content">
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
-  
   
   
   
