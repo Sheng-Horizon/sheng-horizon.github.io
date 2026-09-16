@@ -311,9 +311,9 @@
     
     <tags>
       
-      <tag>CRT</tag>
-      
       <tag>exCRT</tag>
+      
+      <tag>CRT</tag>
       
     </tags>
     
@@ -675,9 +675,9 @@
       
       <category>数学</category>
       
-      <category>图论与搜索</category>
-      
       <category>数论</category>
+      
+      <category>图论与搜索</category>
       
       <category>高斯消元</category>
       
@@ -847,9 +847,9 @@
     
     <tags>
       
-      <tag>lucas</tag>
-      
       <tag>CRT</tag>
+      
+      <tag>lucas</tag>
       
     </tags>
     
