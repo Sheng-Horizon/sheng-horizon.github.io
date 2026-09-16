@@ -791,7 +791,7 @@ disqus:
 gitalk:
   clientID: 5274f5ee5bd26f7ad354
   clientSecret: 834609204c745f006bf5a3c05bbe2f064b1249a0
-  repo: FileSaving
+  repo: 'sheng-horizon.github.io'
   owner: Sheng-Horizon
   admin: ['Sheng-Horizon']
   language: zh-CN
