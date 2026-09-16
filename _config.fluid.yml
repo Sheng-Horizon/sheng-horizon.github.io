@@ -1025,12 +1025,12 @@ links:
       link: "https://www.cnblogs.com/Schucking-Sattin",
       avatar: "https://s2.loli.net/2025/06/19/sHZQLI6NRnCwpFO.jpg"
     }
-    # - {
-    #   title: "Fluid Docs",
-    #   intro: "主题使用指南",
-    #   link: "https://hexo.fluid-dev.com/docs/",
-    #   avatar: "/img/favicon.png"
-    # }
+    - {
+      title: "MetronLee's Blog",
+      intro: "MetronLee的博客",
+      link: "https://metronlee.github.io/blog",
+      avatar: "https://avatars.githubusercontent.com/u/61177223?v=4"
+    }
     # - {
     #   title: "Fluid Repo",
     #   intro: "主题 GitHub 仓库",
