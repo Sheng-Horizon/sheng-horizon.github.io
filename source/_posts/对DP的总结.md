@@ -13,21 +13,21 @@ categories:
 
 ## 子集计数
 
-文件名 `count.cpp/.in/.out` ，时间限制 $ 1 $ 秒，空间限制 $ 512\mathrm{MB} $ 。
+文件名 `count.cpp/.in/.out` ，时间限制 $1$ 秒，空间限制 $512\mathrm{MB}$ 。
 
 #### 题目描述
 
-给定一个长度为 $ n $ 的非负整数序列 $ \left(a_1,a_2,\cdots,a_n\right) $ ，对每个 $ i\in[1,n] $ 求有多少子序列 $ \left(a_{j_1},a_{j_2},\cdots,a_{j_k}\right) $ ，满足 $ k\geq 1 $ ， $ 1\leq j_1\lt j_2\lt \cdots \lt j_k=i $ ，且将序列中的数视为二进制表示的集合后 $ a_{j_1}\subseteq a_{j_2}\subseteq \cdots \subseteq a_{j_k} $ ，答案对 $ 998244353 $ 取模。
+给定一个长度为 $n$ 的非负整数序列 $\left(a_1,a_2,\cdots,a_n\right)$ ，对每个 $i\in[1,n]$ 求有多少子序列 $\left(a_{j_1},a_{j_2},\cdots,a_{j_k}\right)$ ，满足 $k\geq 1$ ， $1\leq j_1\lt j_2\lt \cdots \lt j_k=i$ ，且将序列中的数视为二进制表示的集合后 $a_{j_1}\subseteq a_{j_2}\subseteq \cdots \subseteq a_{j_k}$ ，答案对 $998244353$ 取模。
 
 #### 输入格式
 
-第一行一个整数 $ n $ 。
+第一行一个整数 $n$ 。
 
-接下来 $ n $ 行，每行 $ 1 $ 个非负整数，依次是 $ a_1,a_2,\cdots,a_n $ 。
+接下来 $n$ 行，每行 $1$ 个非负整数，依次是 $a_1,a_2,\cdots,a_n$ 。
 
 #### 输出格式
 
-输出 $ n $ 行，每行 $ 1 $ 个整数，依次是 $ i=1,2,\cdots,n $ 的答案 $ \bmod 998244353 $ 后的结果。
+输出 $n$ 行，每行 $1$ 个整数，依次是 $i=1,2,\cdots,n$ 的答案 $\bmod 998244353$ 后的结果。
 
 #### 样例1
 
@@ -58,50 +58,50 @@ categories:
 
 #### 数据范围
 
-对于 $ 20\% $ 的数据， $ 1\leq n\leq 5000 $ ， $ 0\leq a_i\lt 2^{16} $ ；  
-对于另外 $ 10\% $ 的数据， $ 1\leq n\leq 10^5 $ ， $ 0\leq a_i\lt 2^{10} $ ；  
-对于 $ 100\% $ 的数据， $ 1\leq n\leq 10^5 $ ， $ 0\leq a_i\lt 2^{16} $ 。
+对于 $20\%$ 的数据， $1\leq n\leq 5000$ ， $0\leq a_i\lt 2^{16}$ ；  
+对于另外 $10\%$ 的数据， $1\leq n\leq 10^5$ ， $0\leq a_i\lt 2^{10}$ ；  
+对于 $100\%$ 的数据， $1\leq n\leq 10^5$ ， $0\leq a_i\lt 2^{16}$ 。
 
 它的题解是这样的：
 
 #### 算法1
 
-$ O(n^2) $ 暴力DP。
+$O(n^2)$ 暴力DP。
 
-- 设状态 $ f_i $ 表示以 $ a_i $ 结尾的序列数量。
-- 转移枚举 $ j $ ：若 $ j<i $ 且 $ a_j\subseteq a_i $ ，则 $ f_i\leftarrow f_j $ 。
+- 设状态 $f_i$ 表示以 $a_i$ 结尾的序列数量。
+- 转移枚举 $j$ ：若 $j<i$ 且 $a_j\subseteq a_i$ ，则 $f_i\leftarrow f_j$ 。
 
-期望得分 $ 20 $ 分。
+期望得分 $20$ 分。
 
 #### 算法2
 
-设 $ m=\log\max a_i $ ，当 $ 2^m $ 远小于 $ n $ 时可以枚举 $ a_i $ 的子集进行转移。
+设 $m=\log\max a_i$ ，当 $2^m$ 远小于 $n$ 时可以枚举 $a_i$ 的子集进行转移。
 
-- 设 $ g_s $ 是所有 $ a_j=s $ 的 $ f_j $ 之和。
-- 转移枚举 $ s \subseteq a_i $ ， $ f_i\leftarrow g_s $ 。
-- 转移完后 $ g_{a_i}\leftarrow f_i $ 。
+- 设 $g_s$ 是所有 $a_j=s$ 的 $f_j$ 之和。
+- 转移枚举 $s \subseteq a_i$ ， $f_i\leftarrow g_s$ 。
+- 转移完后 $g_{a_i}\leftarrow f_i$ 。
 
-这样DP时间复杂度是$ O(n\cdot 2^m) $ ，期望得分 $ 30 $ 分。
+这样DP时间复杂度是$O(n\cdot 2^m)$ ，期望得分 $30$ 分。
 
 #### 算法3
 
-在算法2的枚举子集的基础上，也可以改为枚举完全包含 $ a_i $ 的集合进行转移。
+在算法2的枚举子集的基础上，也可以改为枚举完全包含 $a_i$ 的集合进行转移。
 
-- 设 $ g_s $ 是所有 $ a_j\subseteq s $ 的 $ f_j $ 之和。
-- 转移时 $ f_i\leftarrow g_{a_i} $ 。
-- 转移后枚举 $ s $ 满足 $ a_i\subseteq s $ ， $ g_s\leftarrow f_i $ 。
+- 设 $g_s$ 是所有 $a_j\subseteq s$ 的 $f_j$ 之和。
+- 转移时 $f_i\leftarrow g_{a_i}$ 。
+- 转移后枚举 $s$ 满足 $a_i\subseteq s$ ， $g_s\leftarrow f_i$ 。
 
-时间复杂度仍为 $ O(n\cdot 2^m) $ ，期望得分 $ 30 $ 分。
+时间复杂度仍为 $O(n\cdot 2^m)$ ，期望得分 $30$ 分。
 
 #### 算法4
 
-将算法2和算法3结合，将 $ m\leq 16 $ 个二进制位分成低 $ 8 $ 位和高 $ 8 $ 位。低位采用算法2，高位采用算法3。
+将算法2和算法3结合，将 $m\leq 16$ 个二进制位分成低 $8$ 位和高 $8$ 位。低位采用算法2，高位采用算法3。
 
-- 设 $ g_{s,t} $ 表示 $ a_j\texttt{>>}8\subseteq s $ 且 $ a_j\texttt{\&}8= t $ 的所有 $ g_j $ 之和。
-- 转移时枚举 $ s\subseteq a_i\texttt{>>}8 $ ，令 $ t=a_i\texttt{\&}255 $， $ f_j\leftarrow g_{s,t} $ 。
-- 转移后令 $ s=a_i\texttt{>>}8 $ ，枚举 $ t\subseteq a_i\texttt{\&}255 $ ， $ g_{s,t}\leftarrow f_j $ 。
+- 设 $g_{s,t}$ 表示 $a_j\texttt{>>}8\subseteq s$ 且 $a_j\texttt{\&}8= t$ 的所有 $g_j$ 之和。
+- 转移时枚举 $s\subseteq a_i\texttt{>>}8$ ，令 $t=a_i\texttt{\&}255$， $f_j\leftarrow g_{s,t}$ 。
+- 转移后令 $s=a_i\texttt{>>}8$ ，枚举 $t\subseteq a_i\texttt{\&}255$ ， $g_{s,t}\leftarrow f_j$ 。
 
-时间复杂度 $ O(n\cdot 2^{m/2}) $ ，期望得分 $ 100 $ 。
+时间复杂度 $O(n\cdot 2^{m/2})$ ，期望得分 $100$ 。
 
 # 总结
 
