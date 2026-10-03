@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Music-Test</title>
+    <link href="/Music-Test/"/>
+    <url>/Music-Test/</url>
+    
+    <content type="html"><![CDATA[<p><audio src="/music/02-雨だれの歌.mp3" controls preload="metadata"></audio></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>傅里叶变换和拉普拉斯变换</title>
     <link href="/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%92%8C%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2/"/>
     <url>/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%92%8C%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2/</url>
